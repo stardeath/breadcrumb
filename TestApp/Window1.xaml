@@ -25,7 +25,7 @@
 		<Menu Name="menu1" DockPanel.Dock="Top" Margin="10,10,10,10">
 			<MenuItem Header="My Soccer Leagues" ItemsSource="{Binding Source={StaticResource MyList}}" />
 		</Menu>
-		
+
 		<StackPanel DockPanel.Dock="Top" Margin="10">
 			<BreadcrumbLib:Breadcrumb x:Name="breadcrumb" Margin="10">
 				<!--Root-->
@@ -54,4 +54,3 @@
 	</DockPanel>
 </Window>
 <!--</SnippetHDT>-->
-

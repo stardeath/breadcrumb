@@ -29,13 +29,13 @@ namespace BreadcrumbLib
 			get { return (BreadcrumbView)GetValue(ViewProperty); }
 			set { SetValue(ViewProperty, value); }
 		}
-		
+
 		public bool IsFirst
 		{
 			get { return (bool)GetValue(IsFirstProperty); }
 			set { SetValue(IsFirstProperty, value); }
 		}
-		
+
 		public object ParentItem
 		{
 			get { return GetValue(ParentItemProperty); }

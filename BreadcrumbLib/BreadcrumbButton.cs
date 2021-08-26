@@ -30,9 +30,9 @@ namespace BreadcrumbLib
 		public BreadcrumbButton()
 		{
 			CommandBindings.Add(new CommandBinding(GoToCommand, CommandBindingToButton_Executed));
-	    }
+		}
 
-	    public bool IsExpanded
+		public bool IsExpanded
 		{
 			get { return (bool)GetValue(IsExpandedProperty); }
 			set { SetValue(IsExpandedProperty, value); }
@@ -58,15 +58,15 @@ namespace BreadcrumbLib
 			menu = (ContextMenu)GetTemplateChild("menu");
 			if (menu != null)
 			{
-			    menu.DataContext = DataContext;
-			    menu.Opened += menu_Opened;
+				menu.DataContext = DataContext;
+				menu.Opened += menu_Opened;
 
 				BreadcrumbItem templatedParent = TemplatedParent as BreadcrumbItem;
 				if (templatedParent != null && templatedParent.Items.Count > 0)
 				{
-				    DataTemplateSelector selector = Helper.GetDefaultSelector();
-				    DataTemplate template = selector.SelectTemplate(templatedParent.Items[0], this);
-				    menu.ItemTemplate = template;
+					DataTemplateSelector selector = Helper.GetDefaultSelector();
+					DataTemplate template = selector.SelectTemplate(templatedParent.Items[0], this);
+					menu.ItemTemplate = template;
 				}
 
 				menu.CommandBindings.Add(new CommandBinding(InvokeMenuCommand, CommandBindingToMenuItem_Executed));
@@ -82,41 +82,41 @@ namespace BreadcrumbLib
 
 		void menu_Opened(object sender, RoutedEventArgs e)
 		{
-            BreadcrumbView view = View;
+			BreadcrumbView view = View;
 
-		    BreadcrumbItem templatedParent = TemplatedParent as BreadcrumbItem; 
+			BreadcrumbItem templatedParent = TemplatedParent as BreadcrumbItem;
 
-            menu.Placement = PlacementMode.Relative;
-		    menu.PlacementTarget = buttonExpand;
-		    menu.VerticalOffset = buttonExpand.ActualHeight;
-		    menu.HorizontalOffset = buttonExpand.ActualWidth + menu.BorderThickness.Left;
+			menu.Placement = PlacementMode.Relative;
+			menu.PlacementTarget = buttonExpand;
+			menu.VerticalOffset = buttonExpand.ActualHeight;
+			menu.HorizontalOffset = buttonExpand.ActualWidth + menu.BorderThickness.Left;
 
-            if ((templatedParent != null) && templatedParent.IsFirst)
-            {
-                Image image = Helper.FindVisualChild<Image>(templatedParent);
-                if (image != null)
-                    menu.HorizontalOffset -= image.ActualWidth;
-            }
+			if ((templatedParent != null) && templatedParent.IsFirst)
+			{
+				Image image = Helper.FindVisualChild<Image>(templatedParent);
+				if (image != null)
+					menu.HorizontalOffset -= image.ActualWidth;
+			}
 
-            if (view != null)
-            {
-                int index = view.ItemContainerGenerator.IndexFromContainer(TemplatedParent);
-                if (index >= 0)
-                {
-                    menu.UpdateLayout();
-                    TextBlock menuText = Helper.FindVisualChild<TextBlock>(menu);
-                    if (menuText != null)
-                    {
-                        double menuTextOffset = menuText.TransformToVisual(menu).Transform(new Point(0, 0)).X;
-                        TextBlock buttonText = Helper.FindVisualChild<TextBlock>(button);
-                        if (buttonText != null)
-                        {
-                            double buttonTextOffset = buttonText.TransformToVisual((Visual)TemplatedParent).Transform(new Point(0, 0)).X;
-                            menu.HorizontalOffset -= (menuTextOffset - buttonTextOffset);
-                        }
-                    }
-                }
-            }
+			if (view != null)
+			{
+				int index = view.ItemContainerGenerator.IndexFromContainer(TemplatedParent);
+				if (index >= 0)
+				{
+					menu.UpdateLayout();
+					TextBlock menuText = Helper.FindVisualChild<TextBlock>(menu);
+					if (menuText != null)
+					{
+						double menuTextOffset = menuText.TransformToVisual(menu).Transform(new Point(0, 0)).X;
+						TextBlock buttonText = Helper.FindVisualChild<TextBlock>(button);
+						if (buttonText != null)
+						{
+							double buttonTextOffset = buttonText.TransformToVisual((Visual)TemplatedParent).Transform(new Point(0, 0)).X;
+							menu.HorizontalOffset -= (menuTextOffset - buttonTextOffset);
+						}
+					}
+				}
+			}
 
 			foreach (object o in menu.Items)
 			{
@@ -128,7 +128,7 @@ namespace BreadcrumbLib
 					DependencyPropertyKey rolePropertyKey = (DependencyPropertyKey)rolePropertyKeyField.GetValue(menuItem);
 					menuItem.SetValue(rolePropertyKey, MenuItemRole.SubmenuItem);
 
-				    BreadcrumbItem container = view.ItemContainerGenerator.ContainerFromItem(menuItem.DataContext) as BreadcrumbItem;
+					BreadcrumbItem container = view.ItemContainerGenerator.ContainerFromItem(menuItem.DataContext) as BreadcrumbItem;
 					if (container != null && container.IsSelected)
 						menuItem.FontWeight = FontWeights.Bold;
 					else

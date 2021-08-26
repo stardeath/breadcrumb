@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="BreadcrumbLib.Breadcrumb">
+    <Position X="2.75" Y="2" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAQAAAAAAAABBABAAAEARAAAAAQAIA=</HashCode>
+      <FileName>Breadcrumb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BreadcrumbLib.BreadcrumbItem">
+    <Position X="6.75" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQCAAAAAEAAAAABAAAAAAAABABAAIAAAABAAIAA=</HashCode>
+      <FileName>BreadcrumbItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Windows.Controls.ItemsControl" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Controls.HeaderedItemsControl" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BreadcrumbLib.BreadcrumbView">
+    <Position X="11" Y="2" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAEABAAAAAAAABAAAAQAAAA=</HashCode>
+      <FileName>BreadcrumbView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SelectedItem" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BreadcrumbLib.BreadcrumbButton">
+    <Position X="11" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIIQLAAABAAAAAAAAAAAgABAABAAQAAAEAAAQAAFA=</HashCode>
+      <FileName>BreadcrumbButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="View" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

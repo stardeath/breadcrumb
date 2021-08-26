@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreadcrumbLib", "BreadcrumbLib\BreadcrumbLib.csproj", "{43845DC4-DE21-418F-B0A2-74E2FD4C0C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{CD2CE5CE-9BE3-452E-9152-83E0A4ADD6E7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BreadcrumbLib\\BreadcrumbLib.csproj
+		SccProjectName1 = BreadcrumbLib
+		SccLocalPath1 = BreadcrumbLib
+		SccProjectUniqueName2 = TestApp\\TestApp.csproj
+		SccProjectName2 = TestApp
+		SccLocalPath2 = TestApp
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43845DC4-DE21-418F-B0A2-74E2FD4C0C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43845DC4-DE21-418F-B0A2-74E2FD4C0C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43845DC4-DE21-418F-B0A2-74E2FD4C0C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43845DC4-DE21-418F-B0A2-74E2FD4C0C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2CE5CE-9BE3-452E-9152-83E0A4ADD6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2CE5CE-9BE3-452E-9152-83E0A4ADD6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2CE5CE-9BE3-452E-9152-83E0A4ADD6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2CE5CE-9BE3-452E-9152-83E0A4ADD6E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

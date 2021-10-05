@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Breadcrumb/v16
+/BreadcrumbLib
+/TestApp/bin/Debug
+/TestApp/obj/Debug
+/Breadcrumb.sln.DotSettings.user

@@ -1,16 +1,9 @@
 using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
-
-namespace SDKSample
+namespace BreadcrumbLib.Demo.Infrastructure
 {
 	public class League
 	{
@@ -19,7 +12,7 @@ namespace SDKSample
 			_name = name;
 			_divisions = new List<Division>();
 
-			Image = new Image {Width = 16, Source = new BitmapImage(new Uri("pack://application:,,,/Folder_Open.png", UriKind.RelativeOrAbsolute))};
+			Image = new Image {Width = 16, Source = new BitmapImage(new Uri("pack://application:,,,/Resources/Folder_Open.png", UriKind.RelativeOrAbsolute))};
 		}
 
 		public Image Image { get; private set; }
@@ -44,7 +37,7 @@ namespace SDKSample
 			_name = name;
 			_teams = new List<Team>();
 
-			Image = new Image { Width = 16, Source = new BitmapImage(new Uri("pack://application:,,,/foldergreen.png", UriKind.RelativeOrAbsolute)) };
+			Image = new Image { Width = 16, Source = new BitmapImage(new Uri("pack://application:,,,/Resources/foldergreen.png", UriKind.RelativeOrAbsolute)) };
 		}
 
 		public Image Image { get; private set; }
@@ -68,7 +61,7 @@ namespace SDKSample
 		public Team(string name)
 		{
 			_name = name;
-			Image = new Image { Width = 16, Source = new BitmapImage(new Uri("pack://application:,,,/Folder_Open.png", UriKind.RelativeOrAbsolute)) };
+			Image = new Image { Width = 16, Source = new BitmapImage(new Uri("pack://application:,,,/Resources/Folder_Open.png", UriKind.RelativeOrAbsolute)) };
 		}
 
 		public Image Image { get; private set; }

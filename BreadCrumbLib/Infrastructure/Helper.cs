@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace BreadcrumbLib
+namespace BreadcrumbLib.Infrastructure
 {
 	static class Helper
 	{

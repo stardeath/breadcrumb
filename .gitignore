@@ -7,3 +7,11 @@
 /TestApp/bin/Debug
 /TestApp/obj/Debug
 /Breadcrumb.sln.DotSettings.user
+/BreadCrumbLib.Demo/obj
+/BreadCrumbLib.Net5/obj
+/BreadCrumbLib.Demo/bin/Debug/net5.0-windows
+/BreadCrumbLib.Net5/bin/Debug/net5.0-windows
+/BreadCrumbLib.Net5/BreadCrumbLib.Net5.csproj.user
+*.v2
+*.user
+/.vs/Breadcrumb

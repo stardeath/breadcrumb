@@ -18,15 +18,15 @@ namespace BreadcrumbLib
 
 		public BreadcrumbItem SelectedItem
 		{
-			get { return (BreadcrumbItem)GetValue(SelectedItemProperty); }
-			set { SetValue(SelectedItemProperty, value); }
-		}
+			get => (BreadcrumbItem)GetValue(SelectedItemProperty);
+            set => SetValue(SelectedItemProperty, value);
+        }
 
 		protected override DependencyObject GetContainerForItemOverride()
 		{
 			object parent = null;
 			if (Items.Count > 1)
-				parent = Items[Items.Count - 2];
+				parent = Items[^2];
 			return new BreadcrumbItem(parent, this);
 		}
 

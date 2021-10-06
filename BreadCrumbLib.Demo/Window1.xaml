@@ -1,0 +1,74 @@
+﻿<!--<SnippetHDT>-->
+<Window
+    x:Class="BreadcrumbLib.Demo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:breadcrumbLib="http://BreadcrumbLib.com"
+    xmlns:infrastructure="clr-namespace:BreadcrumbLib.Demo.Infrastructure"
+    Title="HierarchicalDataTemplate Sample">
+    <DockPanel>
+        <DockPanel.Resources>
+            <ResourceDictionary>
+
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="/BreadcrumbLib;component/Themes/Geometry.xaml"></ResourceDictionary>
+                </ResourceDictionary.MergedDictionaries>
+
+                <infrastructure:ListLeagueList x:Key="MyList" />
+
+                <HierarchicalDataTemplate DataType="{x:Type infrastructure:League}" ItemsSource="{Binding Path=Divisions}">
+                    <TextBlock Text="{Binding Path=Name}"/>
+                </HierarchicalDataTemplate>
+
+                <HierarchicalDataTemplate DataType="{x:Type infrastructure:Division}" ItemsSource = "{Binding Path=Teams}">
+                    <TextBlock Text="{Binding Path=Name}" />
+                </HierarchicalDataTemplate>
+
+                <DataTemplate DataType="{x:Type infrastructure:Team}">
+                    <TextBlock Text="{Binding Path=Name}"/>
+                </DataTemplate>
+            </ResourceDictionary>
+        </DockPanel.Resources>
+
+        <Menu
+            Name="Menu1"
+            Margin="10,10,10,10"
+            DockPanel.Dock="Top">
+            <MenuItem Header="My Soccer Leagues" ItemsSource="{Binding Source={StaticResource MyList}}" />
+        </Menu>
+
+        <StackPanel Margin="10" DockPanel.Dock="Top">
+        
+            <breadcrumbLib:Breadcrumb x:Name="Breadcrumb" Margin="10" >
+                <!--  Root  -->
+                <breadcrumbLib:BreadcrumbItem ItemsSource="{Binding Source={StaticResource MyList}}">
+                    <breadcrumbLib:BreadcrumbItem.Header>
+                        <Viewbox Margin="6" MaxHeight="24" MaxWidth="24">
+                            <Path Data="{StaticResource Folder}" Fill="Black" ></Path>
+                        </Viewbox>
+                    </breadcrumbLib:BreadcrumbItem.Header>
+                </breadcrumbLib:BreadcrumbItem>
+                <!--  end root  -->
+                <breadcrumbLib:Breadcrumb.Buttons>
+					<Button x:Name="Button" MaxHeight="24" MaxWidth="24">
+                        <Viewbox Margin="2" >
+                            <Path Data="{StaticResource Refresh}" Fill="Black" ></Path>
+                        </Viewbox>
+                    </Button>
+				</breadcrumbLib:Breadcrumb.Buttons>
+            </breadcrumbLib:Breadcrumb>
+
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <TextBlock Text="Selected item: " />
+                <TextBlock Text="{Binding ElementName=Breadcrumb, Path=SelectedItem}" />
+            </StackPanel>
+        </StackPanel>
+
+        <TreeView>
+
+            <TreeViewItem Header="My Soccer Leagues" ItemsSource="{Binding Source={StaticResource MyList}}" />
+        </TreeView>
+
+    </DockPanel>
+</Window>
+<!--</SnippetHDT>-->
